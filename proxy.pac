@@ -6,6 +6,6 @@ function FindProxyForURL(url, host) {
 	|| dnsDomainIs(host, "worldoftanks.ru") || dnsDomainIs(host, "wargaming.net")
 	|| dnsDomainIs(host, "kinopoisk.ru")
 	|| dnsDomainIs(host, "inbox.ru"))
-		return "PROXY vds.ky1vstar.pp.ua:23";
+		return "PROXY gcp.ky1vstar.dev:23";
 	return "DIRECT";
 }
