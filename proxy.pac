@@ -1,11 +1,10 @@
 function FindProxyForURL(url, host) {
-	if (dnsDomainIs(host, "vk.com") || dnsDomainIs(host, "vkontakte.ru") || dnsDomainIs(host, "userapi.com") || dnsDomainIs(host, "vk.cc") || dnsDomainIs(host, "vk-cdn.net") || dnsDomainIs(host, "vkuservideo.net")
-	|| dnsDomainIs(host, "mail.ru") || dnsDomainIs(host, "attachmail.ru") || dnsDomainIs(host, "imgsmail.ru") || dnsDomainIs(host, "mradx.net") || dnsDomainIs(host, "mail.ua")
-	|| dnsDomainIs(host, "ok.ru")
-	|| dnsDomainIs(host, "yandex.ru") || dnsDomainIs(host, "yadi.sk") || dnsDomainIs(host, "yandex.ua") || dnsDomainIs(host, "yandex.st") || dnsDomainIs(host, "yandex.net") || dnsDomainIs(host, "yastatic.net")
-	|| dnsDomainIs(host, "worldoftanks.ru") || dnsDomainIs(host, "wargaming.net")
-	|| dnsDomainIs(host, "kinopoisk.ru")
-	|| dnsDomainIs(host, "inbox.ru"))
-		return "PROXY gcp.ky1vstar.dev:23";
-	return "DIRECT";
+	if (dnsDomainIs(host, ".fozzy.lan")) {
+		return "PROXY fozzy-vpn:8001";
+	} else if (dnsDomainIs(host, ".silpo.dev") || dnsDomainIs(host, ".foodtech.loc")) {
+		return "PROXY fozzy-vpn:8002";
+	} else {
+		return "DIRECT";
+	}
 }
+
